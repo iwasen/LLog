@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LLOG</string>
+    <string name="action_settings">Settings</string>
+    <string name="comment">コメント</string>
+    <string name="event">定型</string>
+    <string name="train">電車</string>
+    <string name="keitai_gps">携帯GPS</string>
+    <string name="step">歩数</string>
+    <string name="photo">写真</string>
+    <string name="gps_logger">GPS Logger</string>
+    <string name="right_arrow">→</string>
+    <string name="add">追加</string>
+    <string name="delete">削除</string>
+    <string name="search">検索</string>
+    <string name="today">今日</string>
+    <string name="edit">編集</string>
+    <string name="map">地図</string>
+    <string name="aerial_photo">航空写真</string>
+    <string name="map_photo">地図＋写真</string>
+    <string name="distance">歩行距離</string>
+    <string name="calorie">ｶﾛﾘｰ</string>
+    <string name="fat">脂肪</string>
+    <string name="unit_ho">歩</string>
+    <string name="unit_km">km</string>
+    <string name="unit_kcal">kCal</string>
+    <string name="unit_g">g</string>
+    <string name="info">情報</string>
+    <string name="list">一覧</string>
+    <string name="zoom">拡大</string>
+    <string name="top">Top</string>
+    <string name="photo_file_num">写真ファイル数</string>
+    <string name="upload_file_num">アップロードファイル数</string>
+    <string name="gps_file_num">GPSファイル数</string>
+    <string name="upload">アップロード</string>
+    <string name="colon">：</string>
+    <string name="place">場所</string>
+    <string name="current_location">現在地</string>
+    <string name="name">名称</string>
+    <string name="yomi">読み</string>
+    <string name="hirosa">広さ</string>
+    <string name="gomibako">ゴミ箱</string>
+    <string name="toire">トイレ</string>
+    <string name="map_photo_short">地+写</string>
+    <string name="kind">種類</string>
+
+</resources>

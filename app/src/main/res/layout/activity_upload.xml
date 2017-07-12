@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textViewPhotoFileNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/photo_file_num" />
+
+    <TextView
+        android:id="@+id/textViewUploadPhotoNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewPhotoFileNum"
+        android:layout_below="@+id/textViewPhotoFileNum"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_file_num" />
+
+    <TextView
+        android:id="@+id/textViewGpsFileNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewPhotoFileNum"
+        android:layout_below="@+id/textViewUploadPhotoNum"
+        android:layout_marginTop="30dp"
+        android:text="@string/gps_file_num" />
+
+    <TextView
+        android:id="@+id/textViewUploadGpsNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewGpsFileNum"
+        android:layout_below="@+id/textViewGpsFileNum"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_file_num" />
+
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewUploadGpsNum"
+        android:layout_below="@+id/textViewUploadGpsNum"
+        android:layout_marginTop="30dp"
+        android:enabled="false"
+        android:text="@string/upload" />
+
+    <TextView
+        android:id="@+id/textViewPhotoFileNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewPhotoFileNum"
+        android:layout_toRightOf="@+id/textViewUploadPhotoNum"
+        android:text="@string/colon" />
+
+    <TextView
+        android:id="@+id/textViewUploadPhotoNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewUploadPhotoNum"
+        android:layout_toRightOf="@+id/textViewUploadPhotoNum"
+        android:text="@string/colon" />
+
+    <TextView
+        android:id="@+id/textViewGpsFileNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewGpsFileNum"
+        android:layout_toRightOf="@+id/textViewUploadPhotoNum"
+        android:text="@string/colon" />
+
+    <TextView
+        android:id="@+id/textViewUploadGpsNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewUploadGpsNum"
+        android:layout_toRightOf="@+id/textViewUploadPhotoNum"
+        android:text="@string/colon" />
+
+</RelativeLayout>

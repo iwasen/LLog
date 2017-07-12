@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPlaceTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textPlaceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/white"
+        android:text="@string/place"
+        android:textIsSelectable="false"
+        android:maxLines="1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/buttonPlaceKind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/kind"
+        android:textSize="13sp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/buttonPlaceLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/current_location"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/buttonPlaceMap"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/map"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/buttonPlaceSatellite"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/photo"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/buttonPlaceHybrid"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/map_photo_short"
+        android:textSize="13sp" />
+
+</LinearLayout>
