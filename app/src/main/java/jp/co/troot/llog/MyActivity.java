@@ -9,6 +9,7 @@ import android.content.Context;
 import android.provider.Settings;
 
 public class MyActivity extends Activity {
+	/*
 	static private boolean mForeground;
 	static private int mRotation;
 
@@ -52,4 +53,5 @@ public class MyActivity extends Activity {
 		}
 		return false;
 	}
+	*/
 }
