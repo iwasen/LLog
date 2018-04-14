@@ -3,12 +3,14 @@ package jp.co.troot.llog;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -75,7 +77,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
 
             mMap.getUiSettings().setRotateGesturesEnabled(false);
 
-            mLocationManager = (LocationManager)this.getSystemService(LOCATION_SERVICE);
+            mLocationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
 
             requestLocation();
 
@@ -84,7 +86,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
 
             setMarkers();
 
-            Button buttonKind = (Button)findViewById(R.id.buttonPlaceKind);
+            Button buttonKind = (Button) findViewById(R.id.buttonPlaceKind);
             buttonKind.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -96,7 +98,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
                 }
             });
 
-            Button buttonLocation = (Button)findViewById(R.id.buttonPlaceLocation);
+            Button buttonLocation = (Button) findViewById(R.id.buttonPlaceLocation);
             buttonLocation.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -105,14 +107,14 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
             });
 
             final int selectedColor = 0xffaaaaff;
-            Button buttonMap = (Button)findViewById(R.id.buttonPlaceMap);
+            Button buttonMap = (Button) findViewById(R.id.buttonPlaceMap);
             buttonMap.setBackgroundColor(selectedColor);
-            buttonMap.setOnClickListener(new View.OnClickListener(){
+            buttonMap.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Button buttonMap = (Button)findViewById(R.id.buttonPlaceMap);
-                    Button buttonSatellite = (Button)findViewById(R.id.buttonPlaceSatellite);
-                    Button buttonHybrid = (Button)findViewById(R.id.buttonPlaceHybrid);
+                    Button buttonMap = (Button) findViewById(R.id.buttonPlaceMap);
+                    Button buttonSatellite = (Button) findViewById(R.id.buttonPlaceSatellite);
+                    Button buttonHybrid = (Button) findViewById(R.id.buttonPlaceHybrid);
 
                     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                     buttonMap.setBackgroundColor(selectedColor);
@@ -121,13 +123,13 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
                 }
             });
 
-            Button buttonSatellite = (Button)findViewById(R.id.buttonPlaceSatellite);
-            buttonSatellite.setOnClickListener(new View.OnClickListener(){
+            Button buttonSatellite = (Button) findViewById(R.id.buttonPlaceSatellite);
+            buttonSatellite.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Button buttonMap = (Button)findViewById(R.id.buttonPlaceMap);
-                    Button buttonSatellite = (Button)findViewById(R.id.buttonPlaceSatellite);
-                    Button buttonHybrid = (Button)findViewById(R.id.buttonPlaceHybrid);
+                    Button buttonMap = (Button) findViewById(R.id.buttonPlaceMap);
+                    Button buttonSatellite = (Button) findViewById(R.id.buttonPlaceSatellite);
+                    Button buttonHybrid = (Button) findViewById(R.id.buttonPlaceHybrid);
 
                     mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                     buttonMap.setBackgroundResource(android.R.drawable.btn_default_small);
@@ -136,13 +138,13 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
                 }
             });
 
-            Button buttonHybrid = (Button)findViewById(R.id.buttonPlaceHybrid);
-            buttonHybrid.setOnClickListener(new View.OnClickListener(){
+            Button buttonHybrid = (Button) findViewById(R.id.buttonPlaceHybrid);
+            buttonHybrid.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Button buttonMap = (Button)findViewById(R.id.buttonPlaceMap);
-                    Button buttonSatellite = (Button)findViewById(R.id.buttonPlaceSatellite);
-                    Button buttonHybrid = (Button)findViewById(R.id.buttonPlaceHybrid);
+                    Button buttonMap = (Button) findViewById(R.id.buttonPlaceMap);
+                    Button buttonSatellite = (Button) findViewById(R.id.buttonPlaceSatellite);
+                    Button buttonHybrid = (Button) findViewById(R.id.buttonPlaceHybrid);
 
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
                     buttonMap.setBackgroundResource(android.R.drawable.btn_default_small);
@@ -177,7 +179,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
                                         station.getString("direction"),
                                         station.getInt("distance") < 1000 ? String.format("%dm", station.getInt("distance")) : station.getString("distanceKm"),
                                         station.getString("traveltime")
-                                        ));
+                                ));
                             }
 
                             new AlertDialog.Builder(PlaceActivity.this)
@@ -252,7 +254,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
                                                     e.printStackTrace();
                                                 }
                                             }
-                                });
+                                        });
                                 if (mKind == 1) {
                                     dialog.setNeutralButton(
                                             "編集",
@@ -330,7 +332,7 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
     }
 
     private void setMarkers() throws Exception {
-        TextView textPlaceTitle = (TextView)findViewById(R.id.textPlaceTitle);
+        TextView textPlaceTitle = (TextView) findViewById(R.id.textPlaceTitle);
         textPlaceTitle.setText(mPlaces[mKind - 1]);
 
         for (Marker marker : mMarkers)
@@ -359,6 +361,16 @@ public class PlaceActivity extends MyActivity implements LocationListener, OnMap
 
     private void requestLocation() {
         if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
             mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         } else if (mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
