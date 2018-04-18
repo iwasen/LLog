@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS"/> -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <permission android:name="com.troot.llog.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
     <uses-feature android:required="true" android:glEsVersion="0x00020000"/>
 
@@ -27,14 +27,14 @@
             </intent-filter>
         </activity>
         <uses-library android:name="com.google.android.maps"/>
-        <activity android:name=".MapActivity" android:label="GPS Logger" android:configChanges="orientation|screenSize"/>
+        <activity android:name=".MapActivity" android:label="GPS Logger" android:configChanges="orientation|screenSize" android:screenOrientation="portrait"/>
         <activity android:name=".PhotoActivity"/>
         <activity android:name=".EditActivity" android:label="編集" android:screenOrientation="portrait"/>
         <activity android:name=".PhotoListActivity" android:label="写真一覧"/>
         <activity android:name=".PhotoZoomActivity" android:label="拡大写真"/>
         <activity android:name=".UploadActivity" android:label="アップロード" android:screenOrientation="portrait"/>
-        <activity android:name=".PlaceActivity" android:label="場所"/>
-        <activity android:name=".PlaceEditActivity" android:label="場所編集"/>
+        <activity android:name=".PlaceActivity" android:label="場所" android:screenOrientation="portrait"/>
+        <activity android:name=".PlaceEditActivity" android:label="場所編集" android:screenOrientation="portrait"/>
         <meta-data android:value="AIzaSyD3ZvOzEtYuoMZPYwmSYVF2HEnMe72OSLs" android:name="com.google.android.maps.v2.API_KEY"/>
     </application>
 

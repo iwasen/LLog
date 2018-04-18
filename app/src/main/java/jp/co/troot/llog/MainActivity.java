@@ -45,7 +45,7 @@ public class MainActivity extends MyActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (Settings.System.canWrite(this)) {
                 // Do stuff here
@@ -57,7 +57,7 @@ public class MainActivity extends MyActivity {
                 return;
             }
         }
-*/
+
         try {
             Window window = getWindow();
             window.setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
