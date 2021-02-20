@@ -34,6 +34,7 @@
     <string name="upload_file_num">アップロードファイル数</string>
     <string name="gps_file_num">GPSファイル数</string>
     <string name="upload">アップロード</string>
+    <string name="lunch">ランチ</string>
     <string name="colon">：</string>
     <string name="place">場所</string>
     <string name="current_location">現在地</string>
@@ -44,5 +45,10 @@
     <string name="toire">トイレ</string>
     <string name="map_photo_short">地+写</string>
     <string name="kind">種類</string>
+    <string name="photo_pos">撮影位置</string>
+    <string name="mobile_gps">携帯GPS</string>
+    <string name="photo_search">写真検索</string>
+    <string name="log_search">ログ検索</string>
+    <string name="mobile_gps_search">携帯GPS検索</string>
 
 </resources>

@@ -15,6 +15,15 @@
         android:textColor="@android:color/white" />
 
     <Button
+        android:id="@+id/buttonEditLunch"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_weight="0"
+        android:text="@string/lunch" />
+
+    <Button
         android:id="@+id/buttonEditUpload"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"

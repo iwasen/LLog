@@ -22,7 +22,6 @@ package com.drew.imaging;
 
 import com.drew.imaging.jpeg.JpegMetadataReader;
 import com.drew.imaging.psd.PsdMetadataReader;
-import com.drew.imaging.tiff.TiffMetadataReader;
 import com.drew.lang.annotations.NotNull;
 import com.drew.lang.annotations.Nullable;
 import com.drew.metadata.Directory;
@@ -109,13 +108,14 @@ public class ImageMetadataReader
         }
 
         // This covers all TIFF and camera RAW files
+/*
         if (magicNumber == INTEL_TIFF_MAGIC_NUMBER || magicNumber == MOTOROLA_TIFF_MAGIC_NUMBER) {
             if (inputStream != null)
-                return TiffMetadataReader.readMetadata(inputStream, waitForBytes);
+                return TiffMetadataReader.readMetadata(inputStream);
             else
                 return TiffMetadataReader.readMetadata(file);
         }
-
+*/
         // This covers PSD files
         // TODO we should really check all 4 bytes of the PSD magic number
         if (magicNumber == PSD_MAGIC_NUMBER) {

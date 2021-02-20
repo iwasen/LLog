@@ -40,5 +40,5 @@ public interface MetadataReader
      * @param reader   The reader from which the metadata should be extracted.
      * @param metadata The Metadata object into which extracted values should be merged.
      */
-    public void extract(@NotNull final BufferReader reader, @NotNull final Metadata metadata);
+    void extract(@NotNull final BufferReader reader, @NotNull final Metadata metadata);
 }
