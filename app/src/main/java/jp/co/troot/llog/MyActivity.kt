@@ -38,6 +38,11 @@ abstract class MyActivity : Activity() {
         return false
     }
 
+    // ホームボタンが押されたら終了する（次回最初から起動させるため）
+    override fun onUserLeaveHint() {
+        finish()
+    }
+
     companion object {
         private var mForeground = false
         private var mRotation = 0
