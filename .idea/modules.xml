@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidLLOGK.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidLLOGK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidLLOGK.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidLLOGK.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/metadata-extractor/AndroidLLOGK.metadata-extractor.iml" filepath="$PROJECT_DIR$/.idea/modules/metadata-extractor/AndroidLLOGK.metadata-extractor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidLLogK.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidLLogK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidLLogK.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidLLogK.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/metadata-extractor/AndroidLLogK.metadata-extractor.iml" filepath="$PROJECT_DIR$/.idea/modules/metadata-extractor/AndroidLLogK.metadata-extractor.iml" />
     </modules>
   </component>
 </project>
